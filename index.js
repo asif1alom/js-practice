@@ -32,13 +32,19 @@ class RAndM{
 
 
         let text = `<div>
-            <div class="wrapper">
-                <div>
+            <div class="mdl">
+                <div class="mdl-content">
                     <img src="${result.image}" alt="" />
-                    <div>${result.name}</div>            
+                    <div>
+                        <h1>${result.name}</h1>  
+                        <h3>${result.gender}</h3>  
+                    </div>
+                    
+                            
                 </div>
+                <button class="closeBtn">X</button>  
                 <div>
-                    <button class="closeBtn">close</button>
+                    
                 </div>
             
             </div>

@@ -1,7 +1,8 @@
 
 
 body{
-    position: relative;
+    font-family: 'Poppins';
+
 }
 
 
@@ -27,14 +28,21 @@ body{
    background-color: rgba(0, 0, 0, 0.836);
    height: 100%;
    display: flex;
+
+  
    
    
 }
-.modal-content{
-    margin: 0 auto;
-    margin-top: 100px;
-    
+.mdl-content{
+    display: flex;
+     width: 80%;
+   height: 50%;
+   background-color: #ffff;
+   margin: 0 auto;
+   margin-top: 100px;
+
 }
-.hidden{
-    display: none;
+.closeBtn{
+    width: 25px;
+    height: 20px;
 }
