@@ -2,6 +2,8 @@
 
 body{
     font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -37,12 +39,53 @@ body{
     display: flex;
      width: 80%;
    height: 50%;
-   background-color: #ffff;
+   background-color:  rgb(22, 16, 32);;
    margin: 0 auto;
    margin-top: 100px;
+   
 
 }
 .closeBtn{
     width: 25px;
     height: 20px;
+}
+.details{
+    padding: 50px;
+    color: #fff;
+}
+
+.details h1,h2,h3{
+    margin: 0!important;
+    margin-bottom: 20px;
+    
+}
+nav{
+    background-color: rgb(22, 16, 32);
+    color: #ffff;
+    padding: 5px;
+    margin-bottom: 50px;
+}
+nav h4{
+    padding-left: 50px;
+}
+
+.eachCharCard{
+    background-color: rgb(22, 16, 32);
+    border-radius: 5px;
+    padding: 10px;
+    color: #ffff;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+#nextPage{
+    background-color:rgb(22, 16, 32) ;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+  
 }

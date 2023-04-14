@@ -35,9 +35,11 @@ class RAndM{
             <div class="mdl">
                 <div class="mdl-content">
                     <img src="${result.image}" alt="" />
-                    <div>
+                    <div class="details">
                         <h1>${result.name}</h1>  
-                        <h3>${result.gender}</h3>  
+                        <h3>Gender : ${result.gender}</h3>  
+                        <h3>Species : ${result.species}</h3>  
+                        <h3>Status : ${result.status}</h3>  
                     </div>
                     
                             
