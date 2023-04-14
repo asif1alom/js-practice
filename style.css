@@ -1,0 +1,40 @@
+
+
+body{
+    position: relative;
+}
+
+
+.charWrapper {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            z-index: 0;
+}
+
+
+
+
+
+
+.mdl{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.836);
+   height: 100%;
+   display: flex;
+   
+   
+}
+.modal-content{
+    margin: 0 auto;
+    margin-top: 100px;
+    
+}
+.hidden{
+    display: none;
+}
