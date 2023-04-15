@@ -21,6 +21,7 @@ class RAndM{
         document.querySelector(".charWrapper").insertAdjacentHTML("beforeend", html);
         // handle click.... 
         this.handleCardClicks();
+        
     }
 
     getCurrentPageNumber(){
@@ -69,6 +70,14 @@ class RAndM{
         return chars;
     }
 
+
+    async fetchSearch(searchLink) {
+         const response = await fetch(`https://rickandmortyapi.com/api/character/?name=${searchLink}`); 
+        const chars = await response.json();
+        console.log(chars);
+        return chars;
+    }
+
     handleCardClicks(){
         // this handle click..
         document.querySelectorAll(".eachCharCard").forEach((each)=>{
@@ -101,8 +110,60 @@ class RAndM{
             this.handleCardClicks();
 
         })
+
+
+
+
+         let prev = document.getElementById('PrevPage')
+        prev.addEventListener("click",async()=>{
+            let prevLink = this.returnedResult.info.prev;
+            console.log("prev", prevLink);
+            let prevPageResult = await this.fetchApiByLink(prevLink);
+            console.log("next page result", prevPageResult);
+            this.returnedResult = prevPageResult;
+            
+            // construct ui.. and show ui
+            let html = this.makeCharacterUI();
+            document.querySelector(".charWrapper").innerHTML = "";
+            document.querySelector(".charWrapper").insertAdjacentHTML("beforeend", html);
+            // handle click.... 
+            this.handleCardClicks();
+
+        })
+
+
+    
+        
+        let search = document.querySelector(".src");
+
+        search.addEventListener("change", async (event) => {
+           
+
+            
+            
+            let searchLink = event.target.value;
+            
+            let searchResult = await this.fetchSearch(searchLink);
+            this.returnedResult = searchResult;
+
+            
+
+            let html = this.makeCharacterUI();
+            document.querySelector(".charWrapper").innerHTML = "";
+            document.querySelector(".charWrapper").insertAdjacentHTML("beforeend", html);
+            
+             this.handleCardClicks();
+        });
+
+
         
     }
+
+
+
+ 
+
+
 
     // this function makes chars ... 
     makeCharacterUI(){

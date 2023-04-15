@@ -81,11 +81,35 @@ nav h4{
     align-items: center;
     margin-top: 50px;
 }
-#nextPage{
+#nextPage,#PrevPage{
     background-color:rgb(22, 16, 32) ;
     padding: 10px 20px;
     color: #fff;
     border-radius: 5px;
     border: none;
+    margin-right: 10px;
+    margin-bottom: 50px;
   
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 40px 0;
+}
+.src{
+    padding: 10px 20px;
+    border: 3px solid rgb(22, 16, 32);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin-right: -5px;
+}
+.sbmt{
+     padding: 13px 20px;
+    background-color:  rgb(22, 16, 32);
+    color: #fff;
+    border: none;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
